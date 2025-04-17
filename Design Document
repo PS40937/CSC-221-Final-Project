@@ -1,0 +1,52 @@
+I began with many internet searches and videos to find an idea of how to start and make this work
+I included AI inquiries with these searches to help understand the syntax of how Python coding needs to be formatted as typical searches were not delivering these details in a manner that I was absorbing.
+Through the AI explanations, though the coding it was showing was not accurate, I was able to gain a deeper understanding of how the syntax and rules apply within Python and could then use that in conjunction with my other research to write the proper coding to ensure a working game of my own design.
+Once it came to building the coding myself, I started by downloading pygame through the command line interface on my computer using the following command:
+pip install pygame
+
+Next I opened Python and started a new file which is named:
+Final Project - Sanke.py (That is an intentional typo)
+
+Next I had to import several libraries to this file using:
+import pygame
+import time
+import random
+
+We can't move much farther without next initializing pygame, so this is done using:
+pygame.init()
+
+Setting the display of the game comes next.
+Once I realized that the colors to be chosen go by the standard RBG format, I opened Excel and used the customize fill color option to find the exact coordinates of the colors to be used within my game.
+I am unsure at this point how many colors will be needed so I starting with 5, which are as follows and the coding for each is shown:
+white = (255, 255, 255)
+black = (0, 0, 0)
+red = (253, 39, 3)
+green = (0, 243, 61)
+blue = (67, 94, 255)
+
+With the colors set, we will now define the dimensions of the game board by denoting how many pixels are to be used in the width and height.
+The coding for setting the dimensions is as follows:
+width = 500
+heihgt = 350
+win = pygame.display.set_mode((width, height))
+As with the colors, I am unsure of what the dimensions should be at this point and will adjust them as needed throughout the build and test phases.
+It was at this phase that I noticed that for defining the "game screen or game window" the opening of the command can either be "win" or "screen" which I found interesting.
+
+Next I will set what the display at the top of the game board will say using the following command:
+pygame.display.set_caption ("CSC-221 Final Project - The Snake")
+To begin designing the snake we have to begin with its inital size and the speed at which it will move.
+First I used the following coding to define the speed or "clock"
+clock = pygame.time.Clock() 
+It is important to remember that every detail matters when coding and in the previous code, the "C" in "Clock" must be capitalized.  I found this out the hard way.
+For the inital snake size and the speed it moves at the following coding is implemented:
+snake_block = 10 
+snake_speed = 13
+Again, as with previous lines of coding, I will make adjustments to these numbers as needed, if needed.
+
+Earlier I had set what the display will read at the top of the screen but had not yet assigned the fonts to the display.
+To do this I opened Micorsoft Word and began browsing the many font styles available.  
+I settled on 2 fonts that appealed most to me and set them in code as seen below:
+font_style = pygame.font.SysFont("Cooper Black", 22)
+score_font = pygame.font.SysFont("comicsansms", 33)
+
+Following the fonts being set, I need to create several definitions surrounding 
