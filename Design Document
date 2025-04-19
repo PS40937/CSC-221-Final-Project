@@ -49,4 +49,9 @@ I settled on 2 fonts that appealed most to me and set them in code as seen below
 font_style = pygame.font.SysFont("Cooper Black", 22)
 score_font = pygame.font.SysFont("comicsansms", 33)
 
-Following the fonts being set, I need to create several definitions surrounding 
+Following the fonts being set, I need to create several definitions surrounding the snake, the scoring, the messaging to be displayed and how the game loops or ends.
+This is done through the following main coding with specifics indented below:
+def draw_snake(snake_block, snake_list)
+def your_score(score)
+def message(msg, color)
+def game_loop()
