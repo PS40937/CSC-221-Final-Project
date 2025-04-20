@@ -16,8 +16,8 @@ We can't move much farther without next initializing pygame, so this is done usi
 pygame.init()
 
 Setting the display of the game comes next.
-Once I realized that the colors to be chosen go by the standard RBG format, I opened Excel and used the customize fill color option to find the exact coordinates of the colors to be used within my game.
-I am unsure at this point how many colors will be needed so I starting with 5, which are as follows and the coding for each is shown:
+Once I realized that the colors to be chosen go by the standard RBG format, I opened Microsoft Excel and used the customize fill color option to find the exact coordinates of the colors to be used within my game.
+I am unsure at this point how many colors will be needed so I am starting with 5, which are as follows and the coding for each is shown:
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (253, 39, 3)
@@ -37,8 +37,8 @@ pygame.display.set_caption ("CSC-221 Final Project - The Snake")
 To begin designing the snake we have to begin with its inital size and the speed at which it will move.
 First I used the following coding to define the speed or "clock"
 clock = pygame.time.Clock() 
-It is important to remember that every detail matters when coding and in the previous code, the "C" in "Clock" must be capitalized.  I found this out the hard way.
-For the inital snake size and the speed it moves at the following coding is implemented:
+It is important to remember that every detail matters when coding and in the previous code, the "C" in "Clock" must be capitalized.  I found this out the hard way as it took nearly 30 minutes to find the error.
+For the inital snake size along with the speed it moves at, the following coding is implemented:
 snake_block = 10 
 snake_speed = 13
 Again, as with previous lines of coding, I will make adjustments to these numbers as needed, if needed.
@@ -48,6 +48,7 @@ To do this I opened Micorsoft Word and began browsing the many font styles avail
 I settled on 2 fonts that appealed most to me and set them in code as seen below:
 font_style = pygame.font.SysFont("Cooper Black", 22)
 score_font = pygame.font.SysFont("comicsansms", 33)
+I may revisit these fonts at a later time for revision.
 
 Following the fonts being set, I need to create several definitions surrounding the snake, the scoring, the messaging to be displayed and how the game loops or ends.
 This is done through the following main coding with specifics indented below:
